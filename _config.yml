@@ -1,34 +1,24 @@
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+title: Multiverse by HTML5 UP
+author: João Neto
+email: joao@neto.pt
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+social:
+  twitter: joaomlneto
+  facebook: joaomlneto
+  instagram: joaomlneto
+  github: joaomlneto
+  linkedin:
 
 # Build settings
 markdown: kramdown
-permalink: pretty
 plugins:
-  - jekyll-sitemap
-compress_html:
-  clippings: all
-  comments: all
-  startings: [html, head, body]
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# Pages Path
-defaults:
-  - scope:
-      path: "_pages"
-    values:
-      permalink: /:basename:output_ext
-
-include:
-  - _pages
-
-sass:
-  sass_dir: assets/scss
-  style: compressed
-
-# Exclude from processing.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE.text
-  - README.md
-  - SECURITY.md
+collections:
+  images:
+    output: true

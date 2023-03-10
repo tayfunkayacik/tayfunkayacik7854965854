@@ -1,34 +1,15 @@
 <head>
-  <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="{%if page.description%}{{page.description}}{%else%}{{site.data.settings.description}}{%endif%}">
-  
-  <!-- theme meta -->
-  <meta name="theme-name" content="kross-jekyll" />
+{%- seo -%}
 
-    
-  {% if site.author %}
-  <meta name="author" content="{{ . }}">
-  {% endif %}
-  
-  <!-- ** Plugins Needed for the Project ** -->
-  {% for css in site.data.plugins.css %}
-  <link rel="stylesheet" href="{{ css | relative_url }}">
-  {% endfor %}
+{%- feed_meta -%}
 
-  <!-- Main Stylesheet -->
-  <link href="{{ '/assets/scss/style.css' | relative_url }}" rel="stylesheet">
+{%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- include google-analytics.html -%}
+{%- endif -%}
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
-  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
-
-  <!-- google analytics -->
-  {% if site.data.settings.google-analytics %}
-    {% include google-analytics.html %}
-  {% endif %}
-
+<link rel="stylesheet" href="{{ 'assets/css/main.css' | absolute_url }}">
+<noscript><link rel="stylesheet" href="{{ 'assets/css/noscript.css' | relative_url }}" /></noscript>
 </head>
