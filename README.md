@@ -1,4 +1,4 @@
-![Multiverse by HTML5UP](https://repository-images.githubusercontent.com/192228387/23ca0280-91f4-11e9-86e0-afcf90e961ad)
+![Multiverse by HTML5UP](https://hthayat.haberturk.com/im/quiz/2021/05/q_6e5fd5de250eea3313daf79aba2ed968.jpg)
 
 # Jekyll Multiverse Template
 
